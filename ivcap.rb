@@ -5,20 +5,20 @@
 class Ivcap < Formula
   desc ""
   homepage "https://github.com/reinventingscience/ivcap-cli"
-  version "0.13.3"
+  version "0.16.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/reinventingscience/ivcap-cli/releases/download/v0.13.3/ivcap-cli_0.13.3_Darwin_arm64.tar.gz", using: GitDownloadStrategy
-      sha256 "45d64f2baa6e3bae8543fd2268f4326b9a7af4e72798ea1b19bb193bcfcec4ad"
+      url "https://github.com/reinventingscience/ivcap-cli/releases/download/v0.16.1/ivcap-cli_0.16.1_darwin_arm64.tar.gz"
+      sha256 "58c3da693144d503ef9b92af527b5f750f7ba4540dffa2d6efdff818bde7df48"
 
       def install
         bin.install "ivcap"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/reinventingscience/ivcap-cli/releases/download/v0.13.3/ivcap-cli_0.13.3_Darwin_x86_64.tar.gz", using: GitDownloadStrategy
-      sha256 "4bdc8b4c5618582ff0b4371078332339f520e0b8c3443df788159ef4a7038fa3"
+      url "https://github.com/reinventingscience/ivcap-cli/releases/download/v0.16.1/ivcap-cli_0.16.1_darwin_amd64.tar.gz"
+      sha256 "072798aa478d93de6aa974b4e010819137af9e9c9614f15cb4537ae7093fe0b3"
 
       def install
         bin.install "ivcap"
@@ -28,16 +28,16 @@ class Ivcap < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/reinventingscience/ivcap-cli/releases/download/v0.13.3/ivcap-cli_0.13.3_Linux_arm64.tar.gz", using: GitDownloadStrategy
-      sha256 "cf2d48e629240a28f7c164dae023c1f651ce231ff298a006e5137acfba7fdb04"
+      url "https://github.com/reinventingscience/ivcap-cli/releases/download/v0.16.1/ivcap-cli_0.16.1_linux_arm64.tar.gz"
+      sha256 "35b893b333a9b6e5d2c17a6d0062b7929dd1b65c6d1baf628f62a868b2f601ce"
 
       def install
         bin.install "ivcap"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/reinventingscience/ivcap-cli/releases/download/v0.13.3/ivcap-cli_0.13.3_Linux_x86_64.tar.gz", using: GitDownloadStrategy
-      sha256 "df7661eee95dd7c20d444b881de13697f6c7284d6d88169a3a5776a064fec93f"
+      url "https://github.com/reinventingscience/ivcap-cli/releases/download/v0.16.1/ivcap-cli_0.16.1_linux_amd64.tar.gz"
+      sha256 "e5d8dfc373d0212816e40b09cf27910d0fc2870403f804cd6e719106da2ae2dd"
 
       def install
         bin.install "ivcap"
